@@ -1,0 +1,100 @@
+.footer {
+  display: flex;
+  position: relative;
+  // justify-content: space-between;
+  padding: 2.6rem 2rem 15rem 2rem;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 70%;
+
+    &-bottom {
+      position: absolute;
+      display: flex;
+      gap: 4rem;
+      font-size: 1.8rem;
+      left: 18px;
+      bottom: 0;
+      margin-top: auto;
+      padding: 1rem 0;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  &__list-item {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+}
+.newsletter-box {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-form {
+}
+
+.footer-email {
+}
+
+.footer-logo {
+  width: auto;
+  margin-bottom: 12rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
+}
+
+footer input::placeholder {
+  font-size: 1.6rem;
+}
+
+.footer-email {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 2rem;
+  border: none;
+  background-color: #e5e4e2;
+  width: 50%;
+}
+
+.newsletter-header {
+  font-size: 2.2rem;
+}
+
+.newsletter-btn {
+  color: $color-white;
+  background-color: #322f31;
+  border: none;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  width: 12%;
+
+
+  @include respond(tab-port) {
+    width: 20%;
+  }
+}
+
+.footer__right-list {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer__right-list ul {
+  list-style: none;
+}

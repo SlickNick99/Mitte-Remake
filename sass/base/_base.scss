@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900px?
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    //width > 1200
+    font-size: 75%; // Arbitrary value 1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  font-family: "dm sans";
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-primary;
+  box-sizing: border-box;
+  letter-spacing: -0.05px;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    margin-left: 5rem;
+  }
+}

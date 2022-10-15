@@ -1,0 +1,298 @@
+.header {
+  &__promotion {
+    font-size: 1.8rem;
+    color: $color-primary;
+    background-color: $color-grey-light-1;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    padding: 0.5rem 0;
+  }
+}
+
+#cartridge {
+  background-image: url("https://mitte.co/media/d3/a2/a9/1657313474/water-intro.webp");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+#home-bg-img {
+  background-image: url("https://mitte.co/media/20/a4/50/1657314069/210706_MITTE_CATEGORY_C_0271_%281%29_800x800.webp");
+  height: 100vh;
+  background-size: cover;
+
+  position: relative;
+
+  @include respond(tab-port) {
+    background-position: center;
+  }
+}
+
+.main-nav {
+  height: 100vh;
+
+  padding: 1.8rem;
+
+  background-size: cover;
+  position: relative;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding: 1rem;
+    color: white;
+  }
+
+  &__col-3 {
+    display: flex;
+    justify-content: center;
+    padding: 0 38px;
+
+    @include respond(tab-port) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &__col-4 {
+    font-size: 1.4rem;
+    display: flex;
+  }
+
+  &__icon {
+    background-image: url("https://mitte.co/bundles/mittetheme/assets/images/logo-white.svg");
+    color: black;
+    width: 4.4rem;
+    height: 4.4rem;
+
+    background-repeat: no-repeat;
+  }
+
+  &__link {
+    color: $color-white;
+    margin: 0 2.4rem;
+    transition: all 0.1s 0.1s;
+
+    &:hover {
+      border-bottom: 3px solid white;
+    }
+
+    &-active {
+      border-bottom: 3px solid white;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 18px;
+    font-size: 14px;
+    text-align: center;
+    width: 7.8rem;
+    color: black;
+    background-color: white;
+  }
+}
+
+.zero {
+  border: 1px solid $color-black;
+  font-size: 1.5rem;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: row;
+  line-height: 1.5rem;
+  vertical-align: middle;
+}
+
+.main-header {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  text-align: center;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__heading {
+  display: inline-block;
+  font-size: 5rem;
+  color: $color-white;
+  margin-bottom: 2rem;
+  line-height: 1;
+  font-weight: 500;
+  width: 150%;
+
+  &-btn {
+    padding: 8.5px 16.5px;
+    border: none;
+    border-radius: 16px;
+  }
+
+  &-cartridge {
+    width: 76rem;
+  }
+}
+
+.down-arrow {
+  font-size: 3rem;
+  color: white;
+}
+
+.border-btm-line {
+  border-bottom: 2px solid white;
+}
+
+.navigation-checkbox {
+  display: none;
+}
+
+.navigation {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 1.4rem 1.8rem;
+  z-index: 999;
+  opacity: 1;
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  visibility: hidden;
+
+  &__menu-logo {
+    background-image: url("https://mitte.co/bundles/mittetheme/assets/images/logo-black.svg");
+    // background-color: black;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    height: 3.2rem;
+    width: 3.2rem;
+    position: relative;
+  }
+  &__menu-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+
+  &__cart {
+    display: flex;
+    margin-right: 20rem;
+    align-items: center;
+  }
+
+  &__menu-top {
+    font-size: 5rem;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.8rem;
+  }
+
+  &__menu-link {
+    color: black;
+    line-height: 4.7rem;
+    transition: all 0.3s;
+    width: auto;
+
+    &:hover {
+    }
+  }
+
+  &__link-text {
+    display: inline-block;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+    vertical-align: top;
+
+    transition: all 0.2s;
+    &:hover {
+      box-shadow: inset 0 -3px 0 black;
+    }
+  }
+
+  &__menu-btm-list {
+    font-size: 2.2rem;
+    list-style: none;
+    line-height: 2.3rem;
+  }
+  &__menu-btm-link {
+    color: $color-primary;
+
+    line-height: 2.3rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__menu-btm-line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-language {
+    font-size: 2.2rem;
+  }
+
+  .color-grey {
+    color: grey;
+  }
+
+  &__buy-btn {
+    display: inline-block;
+    line-height: 2.6rem;
+    text-decoration: none;
+    // padding: 6px 12px;
+    background-color: black;
+    color: white;
+    width: 7.8rem;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    border: none;
+    text-align: center;
+    height: 2.6rem;
+    margin-right: 1.5rem;
+  }
+
+  &__chat-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 5rem;
+    background-color: black;
+    border-radius: 100%;
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .chat-icon {
+      font-size: 5.8rem;
+      z-index: 5;
+      color: white;
+    }
+  }
+  &__close-icon {
+    font-size: 4.8rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}

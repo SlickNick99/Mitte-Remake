@@ -1,0 +1,16 @@
+{
+  "name": "mitte.co",
+  "version": "1.0.0",
+  "description": "Landing page for mitte",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.54.5"
+  }
+}

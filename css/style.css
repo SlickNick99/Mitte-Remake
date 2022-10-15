@@ -1,0 +1,1043 @@
+/*
+0 - 600px:     Phone
+600 - 900:     Tablet portrait
+900 - 1200px: Tablet landscape
+1200px - 1800  is where normal styles apply
+1800px + :     Big desktop
+
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big desktop
+
+
+1em =16px
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "dm sans";
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #322f31;
+  box-sizing: border-box;
+  letter-spacing: -0.05px;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+}
+@media (max-width: 56.25em) {
+  .row {
+    flex-direction: column;
+    margin-left: 5rem;
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.margin-btm-big {
+  margin-bottom: 8rem;
+}
+
+.margin-top-big {
+  margin-top: 8rem;
+}
+
+.margin-btm-md {
+  margin-bottom: 3rem;
+}
+
+.margin-btm-sm {
+  margin-bottom: 1.5rem;
+}
+
+.row.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.margin-left-190 {
+  margin-left: 19rem;
+}
+
+.margin-left-sm {
+  margin-left: 1.5rem;
+}
+
+.margin-left-0 {
+  margin-left: 0 !important;
+}
+
+.margin-left-md {
+  margin-left: 4rem;
+}
+
+.margin-right-sm {
+  margin-right: 1.5rem;
+}
+
+.margin-right-md {
+  margin-right: 4rem;
+}
+
+.margin-left-big {
+  margin-left: 8rem;
+}
+
+.margin-right-big {
+  margin-right: 8rem;
+}
+
+.header__promotion {
+  font-size: 1.8rem;
+  color: #322f31;
+  background-color: #bbb9b7;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  padding: 0.5rem 0;
+}
+
+#cartridge {
+  background-image: url("https://mitte.co/media/d3/a2/a9/1657313474/water-intro.webp");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+#home-bg-img {
+  background-image: url("https://mitte.co/media/20/a4/50/1657314069/210706_MITTE_CATEGORY_C_0271_%281%29_800x800.webp");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 56.25em) {
+  #home-bg-img {
+    background-position: center;
+  }
+}
+
+.main-nav {
+  height: 100vh;
+  padding: 1.8rem;
+  background-size: cover;
+  position: relative;
+}
+.main-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+  padding: 1rem;
+  color: white;
+}
+.main-nav__col-3 {
+  display: flex;
+  justify-content: center;
+  padding: 0 38px;
+}
+@media (max-width: 56.25em) {
+  .main-nav__col-3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+.main-nav__col-4 {
+  font-size: 1.4rem;
+  display: flex;
+}
+.main-nav__icon {
+  background-image: url("https://mitte.co/bundles/mittetheme/assets/images/logo-white.svg");
+  color: black;
+  width: 4.4rem;
+  height: 4.4rem;
+  background-repeat: no-repeat;
+}
+.main-nav__link {
+  color: #fff;
+  margin: 0 2.4rem;
+  transition: all 0.1s 0.1s;
+}
+.main-nav__link:hover {
+  border-bottom: 3px solid white;
+}
+.main-nav__link-active {
+  border-bottom: 3px solid white;
+}
+.main-nav__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  text-align: center;
+  width: 7.8rem;
+  color: black;
+  background-color: white;
+}
+
+.zero {
+  border: 1px solid #000;
+  font-size: 1.5rem;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5rem;
+  vertical-align: middle;
+}
+
+.main-header {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  text-align: center;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__heading {
+  display: inline-block;
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1;
+  font-weight: 500;
+  width: 150%;
+}
+.main__heading-btn {
+  padding: 8.5px 16.5px;
+  border: none;
+  border-radius: 16px;
+}
+.main__heading-cartridge {
+  width: 76rem;
+}
+
+.down-arrow {
+  font-size: 3rem;
+  color: white;
+}
+
+.border-btm-line {
+  border-bottom: 2px solid white;
+}
+
+.navigation-checkbox {
+  display: none;
+}
+
+.navigation {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 1.4rem 1.8rem;
+  z-index: 999;
+  opacity: 1;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  visibility: hidden;
+}
+.navigation__menu-logo {
+  background-image: url("https://mitte.co/bundles/mittetheme/assets/images/logo-black.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 32px 32px;
+  background-size: 32px 32px;
+  height: 3.2rem;
+  width: 3.2rem;
+  position: relative;
+}
+.navigation__menu-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+.navigation__cart {
+  display: flex;
+  margin-right: 20rem;
+  align-items: center;
+}
+.navigation__menu-top {
+  font-size: 5rem;
+}
+.navigation__menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+}
+.navigation__menu-link {
+  color: black;
+  line-height: 4.7rem;
+  transition: all 0.3s;
+  width: auto;
+}
+.navigation__link-text {
+  display: inline-block;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  vertical-align: top;
+  transition: all 0.2s;
+}
+.navigation__link-text:hover {
+  box-shadow: inset 0 -3px 0 black;
+}
+.navigation__menu-btm-list {
+  font-size: 2.2rem;
+  list-style: none;
+  line-height: 2.3rem;
+}
+.navigation__menu-btm-link {
+  color: #322f31;
+  line-height: 2.3rem;
+}
+.navigation__menu-btm-link:hover {
+  text-decoration: underline;
+}
+.navigation__menu-btm-line {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .footer-language {
+  font-size: 2.2rem;
+}
+.navigation .color-grey {
+  color: grey;
+}
+.navigation__buy-btn {
+  display: inline-block;
+  line-height: 2.6rem;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  width: 7.8rem;
+  border-radius: 18px;
+  font-size: 1.4rem;
+  border: none;
+  text-align: center;
+  height: 2.6rem;
+  margin-right: 1.5rem;
+}
+.navigation__chat-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 5rem;
+  background-color: black;
+  border-radius: 100%;
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation__chat-btn .chat-icon {
+  font-size: 5.8rem;
+  z-index: 5;
+  color: white;
+}
+.navigation__close-icon {
+  font-size: 4.8rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.section-1 {
+  padding: 9.6rem 2rem 4.8rem 2rem;
+}
+.section-1__heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.section-1__subheading {
+  font-size: 1.6rem;
+  color: #798490;
+}
+.section-1__img {
+  width: 100%;
+}
+
+.col-3 {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 56.25em) {
+  .col-3 {
+    flex-direction: column;
+  }
+}
+
+.section-2 {
+  padding: 4.8rem 0;
+  width: 100%;
+  color: #fff;
+}
+.section-2__col-2 {
+  display: flex;
+  width: 1488px;
+}
+@media (max-width: 56.25em) {
+  .section-2__col-2 {
+    flex-direction: column;
+    width: auto;
+    display: inline-block;
+  }
+}
+.section-2__img {
+  display: inline-block;
+  height: 80vh;
+  width: 744px;
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+.col-1-of-2 {
+  position: relative;
+}
+
+.col-text-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 3rem;
+  left: 50%;
+}
+
+.col-heading {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -2.4px;
+  line-height: 52px;
+  text-align: left;
+  width: 85%;
+}
+
+.subheading-box {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+}
+
+.empty-box {
+  content: "";
+  width: 30%;
+}
+
+.col-text {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.3px;
+  text-align: left;
+  width: 58%;
+  min-height: 9.2rem;
+}
+
+.section-3 {
+  padding: 4.8rem 0 9.6rem 0;
+}
+.section-3__container {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 56.25em) {
+  .section-3__container {
+    flex-direction: column;
+  }
+}
+.section-3__box {
+  text-align: center;
+}
+.section-3__heading {
+  font-size: 4.3rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+.section-3__sub-heading {
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.section-5 {
+  padding: 6.4rem 0 9.6rem 0;
+  background-color: #e4e3e1;
+}
+.section-5__img-box {
+  flex: 0 0 58.9%;
+  padding-right: 2rem;
+}
+.product-info {
+  padding-right: 6rem;
+}
+
+.product-title {
+  font-size: 5rem;
+}
+
+.product-header-price {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.product-price {
+  line-height: 4rem;
+}
+
+.product-detail-tax {
+  font-size: 1.4rem;
+}
+
+.product-subheader {
+  font-size: 1.8rem;
+}
+
+.product-body {
+  margin-bottom: 4.8rem;
+}
+
+.product-body h4 {
+  font-size: 1.6rem;
+  color: #9d9b9b;
+}
+
+.product-body h3 {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.choice-title {
+  font-size: 1.8rem;
+}
+
+.product-choice {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  text-align: left;
+  height: 8rem;
+  width: 15rem;
+  border-radius: 5px;
+  border: solid 1px grey;
+  margin-right: 1.6rem;
+}
+
+.product-btns {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+}
+
+.product-btn {
+  border-radius: 2rem;
+  border: 1px solid grey;
+  padding: 0.8rem 1.6rem;
+  color: black;
+}
+
+.dark {
+  background-color: #322f31;
+  color: #fff;
+  border: none;
+}
+
+.section-4__container {
+  position: relative;
+}
+
+.arm-video {
+  height: 90vh;
+  width: 100%;
+}
+
+.arm-video.arm-video-bg {
+  background-size: cover;
+  background-color: black;
+  z-index: 10;
+}
+
+.arm-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  width: 75px;
+  z-index: 100;
+}
+
+.video-text-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 2rem;
+  width: 40%;
+  color: #fff;
+}
+
+.video-text {
+  border-bottom: 1px solid grey;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  padding: 2.6rem 2rem 15rem 2rem;
+}
+@media (max-width: 56.25em) {
+  .footer {
+    flex-direction: column;
+  }
+}
+.footer__left {
+  width: 70%;
+}
+.footer__left-bottom {
+  position: absolute;
+  display: flex;
+  gap: 4rem;
+  font-size: 1.8rem;
+  left: 18px;
+  bottom: 0;
+  margin-top: auto;
+  padding: 1rem 0;
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+}
+.footer__list-item {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.newsletter-box {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  width: auto;
+  margin-bottom: 12rem;
+}
+@media (max-width: 56.25em) {
+  .footer-logo {
+    margin-bottom: 3rem;
+  }
+}
+
+footer input::placeholder {
+  font-size: 1.6rem;
+}
+
+.footer-email {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 2rem;
+  border: none;
+  background-color: #e5e4e2;
+  width: 50%;
+}
+
+.newsletter-header {
+  font-size: 2.2rem;
+}
+
+.newsletter-btn {
+  color: #fff;
+  background-color: #322f31;
+  border: none;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  width: 12%;
+}
+@media (max-width: 56.25em) {
+  .newsletter-btn {
+    width: 20%;
+  }
+}
+
+.footer__right-list {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer__right-list ul {
+  list-style: none;
+}
+
+.section-1-container__header {
+  background-color: white;
+  font-size: 5rem;
+  color: black;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+  letter-spacing: -2.4px;
+  font-weight: 500;
+  padding-top: 7.2rem;
+  padding-bottom: 10.8rem;
+  line-height: 5.2rem;
+}
+
+.section-2-container {
+  background-color: #fff;
+}
+
+.section-2-sub-header {
+  margin: 0 auto;
+  max-width: 1192px;
+}
+
+.section-2-card {
+  display: flex;
+  height: 45rem;
+  min-width: 100%;
+}
+.section-2-card__text-box {
+  flex: 0 0 60%;
+  background-color: #e5e4e2;
+  position: relative;
+}
+.section-2-card__img-box {
+  flex: 0 0 40%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.section-2-card__header-box {
+  margin-top: 6rem;
+  letter-spacing: -1.3px;
+}
+.section-2-card__header {
+  font-size: 3.4rem;
+  font-weight: 500;
+}
+.section-2-card__p {
+  font-size: 3.4rem;
+  color: #fff;
+  line-height: 1;
+  width: 70%;
+}
+
+.icon-addition {
+  padding: 0.8rem;
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  color: black;
+  background-color: #fff;
+  border-radius: 100px;
+  animation: pulse 3s linear infinite;
+  position: absolute;
+  bottom: 10%;
+  left: 1.5rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+.margin-20 {
+  background-color: #e5e4e2;
+  margin: 2rem;
+}
+
+.margin-trl {
+  background-color: #e5e4e2;
+  margin: 2rem 2rem 0 2rem;
+  margin-bottom: 0;
+}
+
+.section-3-container {
+  display: flex;
+  padding: 2rem;
+}
+
+.hero-card:not(:last-of-type) {
+  padding-right: 2rem;
+}
+.hero-card:last-of-type {
+  padding-left: 2rem;
+}
+.hero-card__img {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.hero-card__text-box > h4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.hero-card__text-box > p {
+  font-size: 1.6rem;
+  color: rgba(50, 47, 49, 0.4);
+  line-height: -0.5px;
+  line-height: 1.8rem;
+}
+
+.section-4-container {
+  padding: 9.6rem 2rem;
+}
+
+.section-4-block {
+  width: 120rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (max-width: 56.25em) {
+  .section-4-block {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+@media (max-width: 56.25em) {
+  video {
+    max-width: 75%;
+  }
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.section-4__text-box {
+  flex: 0 0 50%;
+  position: relative;
+}
+.section-4__text-box h4 {
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: -2.4px;
+}
+@media (max-width: 56.25em) {
+  .section-4__text-box h4 {
+    font-size: 3rem;
+  }
+}
+.section-4__text-box p {
+  font-size: 1.6rem;
+  color: #9a9699;
+  line-height: 1.8rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 3rem;
+  width: 88%;
+}
+.section-4__text-box .subheader {
+  position: absolute;
+  top: 15%;
+  left: -33%;
+}
+
+.custom-img {
+  height: 41px;
+}
+
+.section-4__img-box {
+  flex: 0 0 37%;
+  position: relative;
+}
+@media (max-width: 56.25em) {
+  .section-4__img-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.section-4__text-box-list {
+  display: inline-block;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+}
+.section-4__text-box-list ul {
+  margin-bottom: 4rem;
+  width: 82%;
+}
+
+.section-4__text-box-list-header {
+  font-weight: 800;
+  letter-spacing: 0px;
+  color: #9a9699;
+  margin-bottom: 1.6rem;
+}
+
+.section-4__text-box-list-li {
+  color: #9a9699;
+  margin-left: 5rem;
+}
+.section-4__text-box-list-li:not(last-child) {
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 56.25em) {
+  .section-4-btn-container {
+    position: absolute;
+    bottom: -7rem;
+    left: 28%;
+  }
+}
+
+.black-header {
+  color: black;
+}
+
+.black-header-btn {
+  background-color: black;
+  color: #fff;
+}
+
+.color-black {
+  color: black;
+}
+
+.shop {
+  background-image: url("https://mitte.co/bundles/mittetheme/assets/images/logo-black.svg");
+  position: relative; /* Allows an absolute positioned psuedo element */
+  color: white;
+  z-index: 100;
+}
+
+.is-active-black {
+  border-bottom: 3px solid black;
+}
+
+.width {
+  width: 100vh !important;
+}
+
+.mitte-home {
+  font-size: 5rem;
+  padding-left: 0.8rem;
+  font-weight: 500;
+  line-height: 6.8rem;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.section-1-container {
+  display: flex;
+  margin-bottom: 20rem;
+}
+
+.section-1-header {
+  font-size: 4.8rem;
+  font-size: 43px;
+  font-weight: normal;
+  letter-spacing: -1.3px;
+  line-height: 45px;
+  text-align: left;
+  color: #322f31;
+  margin: 0 0 40px 0;
+}
+
+.card-body {
+  margin: 0 0.8rem 0 0.8rem;
+  padding: 0 1.8rem 0 1.8rem;
+  background-color: #e5e4e2;
+}
+.card-body__header {
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: -0.7px;
+  margin-bottom: 0;
+  color: #322f31;
+  font-weight: normal;
+  height: auto;
+}
+.card-body__price {
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 500;
+}
+.card-body__include {
+  margin-bottom: 2rem;
+  color: #322f31;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.card-body__text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.2px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+.section-4__container {
+  position: relative;
+}
+
+.arm-video {
+  height: 90vh;
+  width: 100%;
+}
+
+.arm-video.arm-video-bg {
+  // background-image: url("https://mitte.co/bundles/mittetheme/assets/images/Product-Video-Thumbnail.webp");
+  background-size: cover;
+  background-color: black;
+  z-index: 10;
+}
+
+.arm-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  width: 75px;
+  z-index: 100;
+}
+
+.video-text-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 2rem;
+  width: 40%;
+  color: $color-white;
+}
+
+.video-text {
+  border-bottom: 1px solid grey;
+}
